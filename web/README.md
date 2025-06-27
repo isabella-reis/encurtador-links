@@ -65,8 +65,8 @@ VITE_BACKEND_URL=http://localhost:3333
 
 ## 📹 Preview (opcional)
 
-![Versão Desktop](./assets/lg_display.png)
-![Versão Mobile](./assets/mobile_display.png)
+![Versão Desktop](./src/assets/lg_display.png)
+![Versão Mobile](./src/assets/mobile_display.png)
 
 ---
 
