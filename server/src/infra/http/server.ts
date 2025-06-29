@@ -18,6 +18,13 @@ import { exportShortLinksRoute } from './routes/export-shortLinks'
 
 const server = fastify()
 
+// Importação dos plugins necessários
+server.register(fastifyCors, {
+	origin: '*',
+	methods: ['GET', 'POST', 'DELETE'],
+})
+server.register(fastifyMultipart)
+
 server.setValidatorCompiler(validatorCompiler)
 server.setSerializerCompiler(serializerCompiler)
 
@@ -42,12 +49,6 @@ server.setErrorHandler((error, request, reply) => {
 	return reply.status(500).send({ message: 'Internal server error.' })
 })
 
-// Importação dos plugins necessários
-server.register(fastifyCors, {
-	origin: '*',
-	methods: ['GET', 'POST', 'DELETE'],
-})
-server.register(fastifyMultipart)
 
 /**
  * Configuração da documentação da API com Swagger.
