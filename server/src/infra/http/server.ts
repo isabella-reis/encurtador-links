@@ -44,7 +44,7 @@ server.setErrorHandler((error, request, reply) => {
 
 // Importação dos plugins necessários
 server.register(fastifyCors, {
-	origin: ['http://localhost:5173', 'https://brevly-pi.vercel.app'],
+	origin: '*',
 	methods: ['GET', 'POST', 'DELETE'],
 })
 server.register(fastifyMultipart)
