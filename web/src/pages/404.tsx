@@ -1,6 +1,3 @@
-import { useEffect } from "react";
-import { useParams } from "react-router-dom";
-
 import logo from "../assets/404.png";
 
 export function NotFoundPage() {
