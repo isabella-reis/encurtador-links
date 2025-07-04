@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/:shortCode",
+      "destination": "https://encurtador-links-production.up.railway.app/:shortCode"
+    }
+  ]
+}
